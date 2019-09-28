@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Xisabla</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="./xisabla-ico.png">
+</head>
+<body>
+    <div class="container text-center">
+        <div class="display-1 mt-5">Xisabla</div>
+
+        <a href="https://github.com/Xisabla">
+            <img src="./xisabla.png" class="my-5 img-thumbnail rounded" alt="Xisabla Avatar">
+        </a>
+
+        <h2 class="mt-5">Repositories</h2>
+        
+        <div id="repos" class="text-left">
+            <ul></ul>
+        </div>
+
+    </div>
+
+    <script>
+        let ul = document.querySelector("#repos ul");
+
+        fetch("https://api.github.com/users/Xisabla/repos")
+        .then(response => response.json())
+        .then(repos => {
+            repos.forEach(repo => {
+                let li = document.createElement("li");
+                let a = document.createElement("a");
+
+                a.setAttribute("href", repo["html_url"]);
+                a.innerText = repo["name"];
+
+                li.appendChild(a);
+                ul.appendChild(li);
+                console.log(repo["name"], repo["html_url"]);
+            })
+        })
+    </script>
+</body>
+</html>
