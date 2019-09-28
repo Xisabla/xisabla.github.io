@@ -25,23 +25,24 @@
     </div>
 
     <script>
-        let ul = document.querySelector("#repos ul");
+        var ul = document.querySelector("#repos ul");
 
         fetch("https://api.github.com/users/Xisabla/repos")
-        .then(response => response.json())
-        .then(repos => {
-            repos.forEach(repo => {
-                let li = document.createElement("li");
-                let a = document.createElement("a");
-
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (repos) {
+            repos.forEach(function (repo) {
+                var li = document.createElement("li");
+                var a = document.createElement("a");
+    
                 a.setAttribute("href", repo["html_url"]);
                 a.innerText = repo["name"];
-
+    
                 li.appendChild(a);
                 ul.appendChild(li);
-                console.log(repo["name"], repo["html_url"]);
-            })
-        })
+            });
+        });
     </script>
 </body>
 </html>
