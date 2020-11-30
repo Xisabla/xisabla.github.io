@@ -6,17 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Xisabla</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="icon" type="image/png" href="./xisabla-ico.png">
+    <link rel="icon" type="image/png" href="https://github.com/xisabla.png?size=64">
 </head>
 <body>
     <div class="container text-center">
         <div class="display-1 mt-5">Xisabla</div>
+        <div class="display-4">Gautier Miquet</div>
 
         <a href="https://github.com/Xisabla">
-            <img src="./xisabla.png" class="my-5 img-thumbnail rounded" alt="Xisabla Avatar">
+            <img src="https://github.com/xisabla.png" class="my-5 img-thumbnail rounded" width="256" alt="Xisabla Avatar">
         </a>
 
-        <h2 class="mt-5">Repositories</h2>
+        <h2>Showcasing projects</h2>
+
+        <div id="showcase" class="text-left">
+            <ul></ul>
+        </div>
+
+        <h2 class="mt-5">All Repositories</h2>
         
         <div id="repos" class="text-left">
             <ul></ul>
@@ -24,25 +31,6 @@
 
     </div>
 
-    <script>
-        var ul = document.querySelector("#repos ul");
-
-        fetch("https://api.github.com/users/Xisabla/repos")
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (repos) {
-            repos.forEach(function (repo) {
-                var li = document.createElement("li");
-                var a = document.createElement("a");
-    
-                a.setAttribute("href", repo["html_url"]);
-                a.innerText = repo["name"];
-    
-                li.appendChild(a);
-                ul.appendChild(li);
-            });
-        });
-    </script>
+    <script src="./index.js"></script>
 </body>
 </html>
