@@ -122,6 +122,12 @@ const links = {
     "copy-assets": [{
         "npm": "https://www.npmjs.com/package/copy-assets"
     }],
+    
+    "DAUville": [{
+        "doc": "https://xisabla.github.io/DAUville/#detailed-documentation"
+    }, {
+        "website": "https://xisabla.github.io/DAUville"
+    }],
 
     "Dekad": [{
         "releases": "https://github.com/Xisabla/Dekad/releases"
@@ -153,6 +159,7 @@ const showcasing = [
     'AtilaCalculatorSoftware',
     'CombaTiment',
     'copy-assets',
+    'DAUville',
     'Dekad',
     'Korbots',
     'xisabla.github.io'
