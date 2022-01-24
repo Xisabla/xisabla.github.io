@@ -20,6 +20,7 @@
     --green-primary: #27ae60;
     --green-secondary: #2ecc71;
     --light-transparent: #dfe6e9c0;
+    --lighter-transparent: #ffffffc0;
     --light: #dfe6e9;
     --orange-primary: #d35400;
     --orange-secondary: #e67e22;
@@ -300,11 +301,12 @@ section#skills-knowledge .column {
 /* Section > Skills > Progress bars */
 
 section#skills-knowledge .skill {
-    background-color: var(--light-transparent);
-    width: 100%;
+    background-color: var(--lighter-transparent);
+    box-sizing: content-box;
     display: grid;
     grid-template-columns: 30% 70%;
     margin: 20px;
+    width: 99.9%;
 }
 
 section#skills-knowledge .skill .label, section#skills-knowledge .skill .progress {
@@ -316,7 +318,9 @@ section#skills-knowledge .skill .label {
 }
 
 section#skills-knowledge .skill .progress {
+    box-sizing: border-box;
     color: var(--light);
+    max-width: 100%;
     text-align: right;
 }
 
