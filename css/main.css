@@ -37,6 +37,10 @@
     font-family: "Inter";
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
 }
@@ -54,6 +58,15 @@ section {
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding: 60px 0 60px;
+}
+
+section {
+    border-top: 102px solid transparent;
+    /* navbar height */
+    margin: -102px 0 0;
+    background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
 }
 
 a {
@@ -149,10 +162,10 @@ section#about img {
     width: 180px;
 }
 
-section#about div#description {
+section#about #description {
     background-color: var(--light-transparent);
     border-radius: 12px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
     font-size: 18px;
     margin: 20px auto;
     max-width: 550px;
@@ -229,9 +242,10 @@ section#journey .adventure:nth-child(4n - 1) .body::before {
 }
 
 section#journey .adventure .body {
-    position: relative;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
     background: var(--light);
     border-radius: 3px;
+    position: relative;
     padding: 50px 20px 15px;
 }
 
@@ -264,6 +278,7 @@ section#journey .adventure h4 .date::after {
 
 section#journey .path {
     border: 5px solid black;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
     display: inline-block;
     height: 100px;
     position: absolute;
@@ -288,6 +303,7 @@ section#skills-knowledge .category {
 section#skills-knowledge .category h2 {
     background-color: var(--white);
     border-radius: 25px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
     font-size: 26px;
     grid-area: header;
     padding: 30px 130px;
@@ -314,13 +330,15 @@ section#skills-knowledge .column {
 section#skills-knowledge .skill {
     background-color: var(--lighter-transparent);
     box-sizing: content-box;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
     display: grid;
     grid-template-columns: 30% 70%;
     margin: 20px;
     width: 99.9%;
 }
 
-section#skills-knowledge .skill .label, section#skills-knowledge .skill .progress {
+section#skills-knowledge .skill .label,
+section#skills-knowledge .skill .progress {
     padding: 10px;
 }
 
@@ -337,44 +355,143 @@ section#skills-knowledge .skill .progress {
 
 /* Section > Skills > Progress bars > Colors */
 
-section#skills-knowledge .skill.skill-blue .label { background-color: var(--blue-primary); }
-section#skills-knowledge .skill.skill-blue .progress { background-color: var(--blue-secondary); }
-section#skills-knowledge .skill.skill-dark .label { background-color: var(--dark-primary); }
-section#skills-knowledge .skill.skill-dark .progress { background-color: var(--dark-secondary); }
-section#skills-knowledge .skill.skill-green .label { background-color: var(--green-primary); }
-section#skills-knowledge .skill.skill-green .progress { background-color: var(--green-secondary); }
-section#skills-knowledge .skill.skill-orange .label { background-color: var(--orange-primary); }
-section#skills-knowledge .skill.skill-orange .progress { background-color: var(--orange-secondary); }
-section#skills-knowledge .skill.skill-purple .label { background-color: var(--purple-primary); }
-section#skills-knowledge .skill.skill-purple .progress { background-color: var(--purple-secondary); }
-section#skills-knowledge .skill.skill-red .label { background-color: var(--red-primary); }
-section#skills-knowledge .skill.skill-red .progress { background-color: var(--red-secondary); }
-section#skills-knowledge .skill.skill-yellow .label { background-color: var(--yellow-primary); }
-section#skills-knowledge .skill.skill-yellow .progress { background-color: var(--yellow-secondary); }
+section#skills-knowledge .skill.skill-blue .label {
+    background-color: var(--blue-primary);
+}
+
+section#skills-knowledge .skill.skill-blue .progress {
+    background-color: var(--blue-secondary);
+}
+
+section#skills-knowledge .skill.skill-dark .label {
+    background-color: var(--dark-primary);
+}
+
+section#skills-knowledge .skill.skill-dark .progress {
+    background-color: var(--dark-secondary);
+}
+
+section#skills-knowledge .skill.skill-green .label {
+    background-color: var(--green-primary);
+}
+
+section#skills-knowledge .skill.skill-green .progress {
+    background-color: var(--green-secondary);
+}
+
+section#skills-knowledge .skill.skill-orange .label {
+    background-color: var(--orange-primary);
+}
+
+section#skills-knowledge .skill.skill-orange .progress {
+    background-color: var(--orange-secondary);
+}
+
+section#skills-knowledge .skill.skill-purple .label {
+    background-color: var(--purple-primary);
+}
+
+section#skills-knowledge .skill.skill-purple .progress {
+    background-color: var(--purple-secondary);
+}
+
+section#skills-knowledge .skill.skill-red .label {
+    background-color: var(--red-primary);
+}
+
+section#skills-knowledge .skill.skill-red .progress {
+    background-color: var(--red-secondary);
+}
+
+section#skills-knowledge .skill.skill-yellow .label {
+    background-color: var(--yellow-primary);
+}
+
+section#skills-knowledge .skill.skill-yellow .progress {
+    background-color: var(--yellow-secondary);
+}
 
 /* Section > Skills > Progress bars > Sizes */
 
-section#skills-knowledge .skill.skill-100 .progress { width: 100%; }
-section#skills-knowledge .skill.skill-90 .progress { width: 90%; }
-section#skills-knowledge .skill.skill-80 .progress { width: 80%; }
-section#skills-knowledge .skill.skill-70 .progress { width: 70%; }
-section#skills-knowledge .skill.skill-60 .progress { width: 60%; }
-section#skills-knowledge .skill.skill-50 .progress { width: 50%; }
-section#skills-knowledge .skill.skill-40 .progress { width: 40%; }
-section#skills-knowledge .skill.skill-30 .progress { width: 30%; }
-section#skills-knowledge .skill.skill-20 .progress { width: 20%; }
-section#skills-knowledge .skill.skill-10 .progress { width: 10%; }
+section#skills-knowledge .skill.skill-100 .progress {
+    width: 100%;
+}
 
-section#skills-knowledge .skill.skill-100 .progress::after { content: "100%";}
-section#skills-knowledge .skill.skill-90 .progress::after { content: "90%";}
-section#skills-knowledge .skill.skill-80 .progress::after { content: "80%";}
-section#skills-knowledge .skill.skill-70 .progress::after { content: "70%";}
-section#skills-knowledge .skill.skill-60 .progress::after { content: "60%";}
-section#skills-knowledge .skill.skill-50 .progress::after { content: "50%";}
-section#skills-knowledge .skill.skill-40 .progress::after { content: "40%";}
-section#skills-knowledge .skill.skill-30 .progress::after { content: "30%";}
-section#skills-knowledge .skill.skill-20 .progress::after { content: "20%";}
-section#skills-knowledge .skill.skill-10 .progress::after { content: "10%";}
+section#skills-knowledge .skill.skill-90 .progress {
+    width: 90%;
+}
+
+section#skills-knowledge .skill.skill-80 .progress {
+    width: 80%;
+}
+
+section#skills-knowledge .skill.skill-70 .progress {
+    width: 70%;
+}
+
+section#skills-knowledge .skill.skill-60 .progress {
+    width: 60%;
+}
+
+section#skills-knowledge .skill.skill-50 .progress {
+    width: 50%;
+}
+
+section#skills-knowledge .skill.skill-40 .progress {
+    width: 40%;
+}
+
+section#skills-knowledge .skill.skill-30 .progress {
+    width: 30%;
+}
+
+section#skills-knowledge .skill.skill-20 .progress {
+    width: 20%;
+}
+
+section#skills-knowledge .skill.skill-10 .progress {
+    width: 10%;
+}
+
+section#skills-knowledge .skill.skill-100 .progress::after {
+    content: "100%";
+}
+
+section#skills-knowledge .skill.skill-90 .progress::after {
+    content: "90%";
+}
+
+section#skills-knowledge .skill.skill-80 .progress::after {
+    content: "80%";
+}
+
+section#skills-knowledge .skill.skill-70 .progress::after {
+    content: "70%";
+}
+
+section#skills-knowledge .skill.skill-60 .progress::after {
+    content: "60%";
+}
+
+section#skills-knowledge .skill.skill-50 .progress::after {
+    content: "50%";
+}
+
+section#skills-knowledge .skill.skill-40 .progress::after {
+    content: "40%";
+}
+
+section#skills-knowledge .skill.skill-30 .progress::after {
+    content: "30%";
+}
+
+section#skills-knowledge .skill.skill-20 .progress::after {
+    content: "20%";
+}
+
+section#skills-knowledge .skill.skill-10 .progress::after {
+    content: "10%";
+}
 
 /* Section > Projects */
 
@@ -408,10 +525,11 @@ section#projects .project img.icon {
 }
 
 section#projects .project .body {
-    position: relative;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
     background: var(--light);
     border-radius: 3px;
     padding: 20px 15px 45px;
+    position: relative;
 }
 
 section#projects .project .header h4 {
@@ -519,10 +637,15 @@ section#booking-hobbies .items {
 
 section#booking-hobbies .item {
     background: var(--lighter-transparent);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
     margin: 20px;
     padding: 20px 15px 10px;
     text-align: center;
+}
+
+section#booking-hobbies .item:last-child:nth-child(3n + 1) {
+    grid-column-end: -2;
 }
 
 section#booking-hobbies .item h4 {
