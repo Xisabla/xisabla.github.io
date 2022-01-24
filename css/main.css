@@ -56,6 +56,17 @@ section {
     padding: 60px 0 60px;
 }
 
+a {
+    color: var(--gray-dark);
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.5;
+    transition: 0.25s ease-out;
+}
+
+
 .separator {
     color: var(--blue-light);
 }
@@ -439,17 +450,6 @@ section#projects .project ul.tags li {
     font-size: 14px;
 }
 
-section#projects .project .body a {
-    color: var(--gray-dark);
-    text-decoration: none;
-}
-
-section#projects .project .body a:hover {
-    opacity: 0.5;
-    transition: 0.25s ease-out;
-}
-
-
 section#projects .project ul.references {
     list-style: none;
     position: absolute;
@@ -507,4 +507,34 @@ section#projects .project ul.tags li.tag-work::after {
 
 section#booking-hobbies {
     background-image: url("../img/backgrounds/booking-hobbies.jpg");
+}
+
+section#booking-hobbies .items {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    display: grid;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+section#booking-hobbies .item {
+    background: var(--lighter-transparent);
+    border-radius: 6px;
+    margin: 20px;
+    padding: 20px 15px 10px;
+    text-align: center;
+}
+
+section#booking-hobbies .item h4 {
+    background: var(--blue-lighter);
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 16px;
+    padding: 4px 8px;
+}
+
+section#booking-hobbies .item img {
+    border-radius: 3px;
+    vertical-align: middle;
+    width: 200px;
 }
