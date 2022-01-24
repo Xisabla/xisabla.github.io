@@ -408,6 +408,10 @@ section#projects .project .header h4 {
     margin: 0;
 }
 
+section#projects .project .header h4 .date {
+    color: var(--gray-darker);
+}
+
 section#projects .project .header h4 .date::after {
     color: var(--blue-light);
     content: "·";
