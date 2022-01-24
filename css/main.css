@@ -636,7 +636,7 @@ section#booking-hobbies .items {
 }
 
 section#booking-hobbies .item {
-    background: var(--lighter-transparent);
+    background: var(--light);
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
     margin: 20px;
@@ -659,5 +659,5 @@ section#booking-hobbies .item h4 {
 section#booking-hobbies .item img {
     border-radius: 3px;
     vertical-align: middle;
-    width: 200px;
+    width: 220px;
 }
