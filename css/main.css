@@ -1,0 +1,502 @@
+/* Fonts */
+
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/inter/Inter-Regular.ttf") format("truetype");
+}
+
+/* Globals */
+
+:root {
+    --blue-light: #0984e3;
+    --blue-lighter: #74b9ff;
+    --blue-primary: #2980b9;
+    --blue-secondary: #3498db;
+    --dark-primary: #2c3e50;
+    --dark-secondary: #34495e;
+    --gray-dark: #636e72;
+    --gray-darker: #414b4e;
+    --gray: #dddddd;
+    --green-primary: #27ae60;
+    --green-secondary: #2ecc71;
+    --light-transparent: #dfe6e9c0;
+    --light: #dfe6e9;
+    --orange-primary: #d35400;
+    --orange-secondary: #e67e22;
+    --purple-primary: #8e44ad;
+    --purple-secondary: #9b59b6;
+    --red-primary: #c0392b;
+    --red-secondary: #e74c3c;
+    --white: #ffffff;
+    --yellow-primary: #f39c12;
+    --yellow-secondary: #f1c40f;
+}
+
+* {
+    font-family: "Inter";
+}
+
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: lighter;
+}
+
+section {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 60px 0 60px;
+}
+
+.separator {
+    color: var(--blue-light);
+}
+
+/* Navigation */
+
+body {
+    margin-top: 102px;
+}
+
+nav#main-nav {
+    background-color: var(--white);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    height: 102px;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+nav#main-nav ul {
+    list-style: none;
+    margin: 0;
+}
+
+nav#main-nav li:not(:first-child)::before {
+    color: var(--blue-lighter);
+    content: "/";
+    display: inline-block;
+}
+
+nav#main-nav li {
+    display: inline-block;
+    padding: 20px 0;
+}
+
+nav#main-nav a {
+    border-bottom: 1px solid transparent;
+    color: #000;
+    display: inline-block;
+    font-size: 18px;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+nav#main-nav a:hover {
+    border-bottom: 1px solid var(--blue-light);
+    color: var(--blue-light);
+    transition: 0.25s ease-out;
+}
+
+/* Section > About */
+
+section#about {
+    background-image: url("../img/backgrounds/about.jpg");
+    background-size: cover;
+    text-align: center;
+}
+
+section#about h1 {
+    font-size: 70px;
+    margin: 50px 0 30px 0;
+}
+
+section#about h2 {
+    color: var(--light);
+    font-size: 30px;
+    margin: 0px 0 60px 0;
+}
+
+section#about .username {
+    color: var(--blue-lighter);
+}
+
+section#about img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    width: 180px;
+}
+
+section#about div#description {
+    background-color: var(--light-transparent);
+    border-radius: 12px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    margin: 20px auto;
+    max-width: 550px;
+    padding: 10px 20px;
+}
+
+section#about ul#contact {
+    font-size: 18px;
+    list-style: none;
+    margin: 20px auto 0;
+}
+
+section#about ul#contact li:not(:first-child)::before {
+    color: var(--blue-light);
+    content: "·";
+    display: inline-block;
+    font-size: 40px;
+}
+
+section#about ul#contact li {
+    display: inline-block;
+}
+
+section#about ul#contact li a img {
+    vertical-align: middle;
+    width: 32px;
+}
+
+section#about ul#contact li a:hover img {
+    opacity: 0.5;
+    transition: 0.25s ease-out;
+}
+
+/* Section > Journey */
+
+section#journey {
+    background-image: url("../img/backgrounds/journey.jpg");
+    padding: 30px 0 60px;
+}
+
+section#journey .adventure {
+    margin: 0px auto 0px;
+    max-width: 650px;
+    padding: 0;
+}
+
+section#journey .adventure p.icon {
+    position: relative;
+    margin: 0;
+    top: 100px;
+    left: -120px;
+    font-size: 64px;
+    display: inline-block;
+}
+
+section#journey .adventure:nth-child(4n - 1) p.icon {
+    left: 680px;
+}
+
+section#journey .adventure .body::before {
+    background: inherit;
+    content: '';
+    display: block;
+    left: -10px;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 20px;
+    height: 20px;
+}
+
+section#journey .adventure:nth-child(4n - 1) .body::before {
+    left: 640px;
+    transform: rotate(45deg);
+}
+
+section#journey .adventure .body {
+    position: relative;
+    background: var(--light);
+    border-radius: 3px;
+    padding: 50px 20px 15px;
+}
+
+section#journey .adventure h4 {
+    background: var(--blue-lighter);
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 16px;
+    left: 20px;
+    padding: 4px 8px;
+    position: absolute;
+    top: 0;
+}
+
+section#journey .adventure:nth-child(4n - 1) h4 {
+    left: auto;
+    right: 20px;
+}
+
+section#journey .adventure h4 .date {
+    color: var(--gray-darker)
+}
+
+section#journey .adventure h4 .date::after {
+    color: var(--blue-light);
+    content: "/";
+    font-weight: bold;
+    margin: 0 0 0 5px;
+}
+
+section#journey .path {
+    border: 5px solid black;
+    display: inline-block;
+    height: 100px;
+    position: absolute;
+    right: 750px;
+}
+
+/* Section > Skills & knowledge */
+
+section#skills-knowledge {
+    background-image: url("../img/backgrounds/skills-knowledge.jpg");
+}
+
+section#skills-knowledge .category {
+    padding: 20px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-areas: "header header"
+        "a a";
+    max-width: 1200px;
+}
+
+section#skills-knowledge .category h2 {
+    background-color: var(--white);
+    border-radius: 25px;
+    font-size: 26px;
+    grid-area: header;
+    padding: 30px 130px;
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+section#skills-knowledge .category h2 .subtitle {
+    color: var(--gray-darker);
+}
+
+section#skills-knowledge .category h2 .subtitle::before {
+    content: "/ ";
+    color: var(--blue-light);
+}
+
+section#skills-knowledge .column {
+    margin: 0 20px;
+}
+
+/* Section > Skills > Progress bars */
+
+section#skills-knowledge .skill {
+    background-color: var(--light-transparent);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin: 20px;
+}
+
+section#skills-knowledge .skill .label, section#skills-knowledge .skill .progress {
+    padding: 10px;
+}
+
+section#skills-knowledge .skill .label {
+    color: var(--light);
+}
+
+section#skills-knowledge .skill .progress {
+    color: var(--light);
+    text-align: right;
+}
+
+/* Section > Skills > Progress bars > Colors */
+
+section#skills-knowledge .skill.skill-blue .label { background-color: var(--blue-primary); }
+section#skills-knowledge .skill.skill-blue .progress { background-color: var(--blue-secondary); }
+section#skills-knowledge .skill.skill-dark .label { background-color: var(--dark-primary); }
+section#skills-knowledge .skill.skill-dark .progress { background-color: var(--dark-secondary); }
+section#skills-knowledge .skill.skill-green .label { background-color: var(--green-primary); }
+section#skills-knowledge .skill.skill-green .progress { background-color: var(--green-secondary); }
+section#skills-knowledge .skill.skill-orange .label { background-color: var(--orange-primary); }
+section#skills-knowledge .skill.skill-orange .progress { background-color: var(--orange-secondary); }
+section#skills-knowledge .skill.skill-purple .label { background-color: var(--purple-primary); }
+section#skills-knowledge .skill.skill-purple .progress { background-color: var(--purple-secondary); }
+section#skills-knowledge .skill.skill-red .label { background-color: var(--red-primary); }
+section#skills-knowledge .skill.skill-red .progress { background-color: var(--red-secondary); }
+section#skills-knowledge .skill.skill-yellow .label { background-color: var(--yellow-primary); }
+section#skills-knowledge .skill.skill-yellow .progress { background-color: var(--yellow-secondary); }
+
+/* Section > Skills > Progress bars > Sizes */
+
+section#skills-knowledge .skill.skill-100 .progress { width: 100%; }
+section#skills-knowledge .skill.skill-90 .progress { width: 90%; }
+section#skills-knowledge .skill.skill-80 .progress { width: 80%; }
+section#skills-knowledge .skill.skill-70 .progress { width: 70%; }
+section#skills-knowledge .skill.skill-60 .progress { width: 60%; }
+section#skills-knowledge .skill.skill-50 .progress { width: 50%; }
+section#skills-knowledge .skill.skill-40 .progress { width: 40%; }
+section#skills-knowledge .skill.skill-30 .progress { width: 30%; }
+section#skills-knowledge .skill.skill-20 .progress { width: 20%; }
+section#skills-knowledge .skill.skill-10 .progress { width: 10%; }
+
+section#skills-knowledge .skill.skill-100 .progress::after { content: "100%";}
+section#skills-knowledge .skill.skill-90 .progress::after { content: "90%";}
+section#skills-knowledge .skill.skill-80 .progress::after { content: "80%";}
+section#skills-knowledge .skill.skill-70 .progress::after { content: "70%";}
+section#skills-knowledge .skill.skill-60 .progress::after { content: "60%";}
+section#skills-knowledge .skill.skill-50 .progress::after { content: "50%";}
+section#skills-knowledge .skill.skill-40 .progress::after { content: "40%";}
+section#skills-knowledge .skill.skill-30 .progress::after { content: "30%";}
+section#skills-knowledge .skill.skill-20 .progress::after { content: "20%";}
+section#skills-knowledge .skill.skill-10 .progress::after { content: "10%";}
+
+/* Section > Projects */
+
+section#projects {
+    background-image: url("../img/backgrounds/projects.jpg");
+}
+
+section#projects .project {
+    margin: 0px auto 0px;
+    max-width: 900px;
+    padding: 0;
+}
+
+section#projects .project:not(:last-child)::after {
+    border: 1px solid black;
+    content: "";
+    display: inline-block;
+    height: 50px;
+    left: -90px;
+    position: relative;
+    top: 0;
+}
+
+section#projects .project img.icon {
+    height: 64px;
+    left: -120px;
+    margin: 0;
+    position: relative;
+    top: 100px;
+    width: 64px;
+}
+
+section#projects .project .body {
+    position: relative;
+    background: var(--light);
+    border-radius: 3px;
+    padding: 20px 15px 45px;
+}
+
+section#projects .project .header h4 {
+    background: var(--blue-lighter);
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 16px;
+    padding: 4px 8px;
+    margin: 0;
+}
+
+section#projects .project .header h4 .date::after {
+    color: var(--blue-light);
+    content: "·";
+    font-weight: bold;
+    margin: 0 0 0 5px;
+}
+
+section#projects .project ul.tags {
+    list-style: none;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+}
+
+section#projects .project ul.tags li {
+    display: inline-block;
+    background: var(--blue-lighter);
+    border-radius: 3px;
+    padding: 3px 5px;
+    color: var(--light);
+    font-size: 14px;
+}
+
+section#projects .project .body a {
+    color: var(--gray-dark);
+    text-decoration: none;
+}
+
+section#projects .project .body a:hover {
+    opacity: 0.5;
+    transition: 0.25s ease-out;
+}
+
+
+section#projects .project ul.references {
+    list-style: none;
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+}
+
+section#projects .project ul.references li {
+    display: inline-block;
+}
+
+section#projects .project ul.references li a {
+    background: var(--blue-lighter);
+    border-radius: 12px;
+    color: var(--light);
+    font-size: 14px;
+    padding: 10px;
+}
+
+/* Section > Projects > Tags */
+
+section#projects .project ul.tags li.tag-community {
+    background: var(--orange-secondary);
+}
+
+section#projects .project ul.tags li.tag-lab {
+    background: var(--green-secondary);
+}
+
+section#projects .project ul.tags li.tag-school {
+    background: var(--dark-secondary);
+}
+
+section#projects .project ul.tags li.tag-work {
+    background: var(--purple-secondary);
+}
+
+section#projects .project ul.tags li.tag-community::after {
+    content: "📖 Community";
+}
+
+section#projects .project ul.tags li.tag-lab::after {
+    content: "🔬 Lab";
+}
+
+section#projects .project ul.tags li.tag-school::after {
+    content: "🎒 School";
+}
+
+section#projects .project ul.tags li.tag-work::after {
+    content: "💼 Work";
+}
+
+/* Section > Booking & Hobbies */
+
+section#booking-hobbies {
+    background-image: url("../img/backgrounds/booking-hobbies.jpg");
+}
