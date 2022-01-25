@@ -278,6 +278,7 @@ section#journey .adventure h4 .date::after {
 
 section#journey .path {
     border: 5px solid black;
+    background-color: black;
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
     display: inline-block;
     height: 100px;
