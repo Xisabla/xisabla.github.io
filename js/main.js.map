@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../src/main.ts"],
-  "sourcesContent": ["console.log(\"\uD83D\uDE80\")"],
-  "mappings": "MAAA,QAAQ,IAAI",
-  "names": []
-}
