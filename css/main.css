@@ -7,6 +7,8 @@
 
 /* Globals */
 
+/* TODO: Rework color palette */
+
 :root {
     --blue-light: #0984e3;
     --blue-lighter: #74b9ff;
@@ -53,18 +55,15 @@ h5,
 h6 {
     font-weight: lighter;
 }
-
 section {
+    background-clip: padding-box;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding: 60px 0 60px;
-}
-
-section {
     border-top: 102px solid transparent;
     /* navbar height */
     margin: -102px 0 0;
-    background-clip: padding-box;
+    padding: 60px 0 60px;
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
 }
